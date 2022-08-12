@@ -21,48 +21,6 @@ data = BeautifulSoup(response.text)
 data.find(class_= 'panel-body')
 
 
-# In[5]:
-
-
-for pet in data.find_all(class_= 'panel-body'):
-    #img = pet.select_one("img[data-srcset]").attrs['data-srcset'].split(',')[0]
-    img = pet.img['data-srcset'].split(",")[0].rstrip('1234567890w')
-    if img == False:
-        pass
-    else:
-        print(pet.text.strip())
-        print(img)
-    print("----")
-
-
-# In[6]:
-
-
-for pet in data.find_all(class_= 'panel-body'):
-    info = pet.text.strip()
-    img = pet.img
-    if img == None:
-        print(info)
-    else:
-        print(info)
-        print(img.attrs['data-srcset'].split(",")[0].rstrip("12345567890W"))
-    print("----")
-
-
-# In[7]:
-
-
-for pet in data.find_all(class_= 'panel-body'):
-    info = pet.text.strip()
-    img = pet.img
-    if img == None:
-        print(info)
-    else:
-        print(info)
-        print(img.attrs['data-srcset'].split(",")[0].rstrip("12345567890w"))
-    print("----")
-
-
 # In[30]:
 
 
