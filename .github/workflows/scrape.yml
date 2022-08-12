@@ -28,6 +28,7 @@ jobs:
       - name: Run the scraping script
         run: python scraper.py
       # I just stole the rest of this code so don't ask me questions about it
+      - continue-on-error: true
       - name: Commit and push if content changed
         run: |-
           git config user.name "Automated"
